@@ -2,7 +2,7 @@
 
 /* appearance */
 static const char *fonts[] = {
-	"Inconsolata for Powerline:size=12.5",
+	"Go Mono:size=11",
 	"Material Icons:size=12.5:antialias=false:hinting=false",
 };
 static const char dmenufont[]       = "PxPlus IBM VGA8:size=12.5";
@@ -81,7 +81,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "st", "-f", "Inconsolata for Powerline:size=12.5", NULL };
+static const char *termcmd[]  = { "st", "-f", "Go Mono:size=11", NULL };
 static const char *lockscr[]  = { "xautolock", "-locknow", NULL };
 
 static Key keys[] = {
