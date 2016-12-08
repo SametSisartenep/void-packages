@@ -3,19 +3,19 @@
 /* appearance */
 static const char *fonts[] = {
 	"Go Mono:size=11",
-	"Material Icons:size=12.5:antialias=false:hinting=false",
+	"Material Icons:size=11:antialias=false:hinting=false",
 };
 static const char dmenufont[]       = "PxPlus IBM VGA8:size=12.5";
-static const char normbordercolor[] = "#444444";
+static const char normbordercolor[] = "#9eeeee";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";
-static const char selbordercolor[]  = "#005577";
-static const char selbgcolor[]      = "#005577";
-static const char selfgcolor[]      = "#eeeeee";
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const char selbordercolor[]  = "#55aaaa";
+static const char selbgcolor[]      = "#8888cc";
+static const char selfgcolor[]      = "#222222";
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
+static const int topbar             = 0;        /* 0 means bottom bar */
 
 #define icon_dashboard "\ue871"
 #define icon_view_quilt "\ue8f1"
@@ -81,7 +81,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "st", "-f", "Go Mono:size=11", NULL };
+static const char *termcmd[]  = { "st", "-f", "Go Mono:size=10", NULL };
 static const char *lockscr[]  = { "xautolock", "-locknow", NULL };
 
 static Key keys[] = {
