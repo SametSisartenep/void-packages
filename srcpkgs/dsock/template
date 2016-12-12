@@ -1,0 +1,34 @@
+# Template file for 'dsock'
+pkgname=dsock
+version=0.3
+revision=1
+build_style=gnu-configure
+hostmakedepends="automake libtool libdill-devel"
+depends="libdill"
+short_desc="A library of easily composable microprotocols"
+maintainer="SametSisartenep <rodrigosloop@gmail.com>"
+license="MIT"
+homepage="http://libdill.org/"
+distfiles="http://libdill.org/${pkgname}-${version}-alpha.tar.gz"
+checksum=ff5512ac744c87221fca4595b74e48923a0965925d8b3c777ce301f1deb824a5
+
+wrksrc="${pkgname}-${version}-alpha"
+
+pre_configure() {
+	export CFLAGS="${CFLAGS/-D_FORTIFY_SOURCE=?/}"
+	autoreconf -fi
+}
+post_install() {
+	vlicense COPYING
+}
+
+dsock-devel_package() {
+	depends="${sourcepkg}>=${version}_${revision}"
+	short_desc+=" - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/lib/*.a
+		vmove usr/lib/*.so
+	}
+}

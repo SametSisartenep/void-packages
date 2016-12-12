@@ -2743,3 +2743,5 @@ libkea-asiodns.so.0 libkea-1.1.0_1
 libkea-dns++.so.1 libkea-1.1.0_1
 libkea-util-io.so.0 libkea-1.1.0_1
 libkea-threads.so.1 libkea-1.1.0_1
+libdill.so.6 libdill-0.8_1
+libdsock.so.3 dsock-0.3_1
